@@ -11,7 +11,7 @@ public class MainManager : MonoBehaviour
     public Rigidbody Ball;
 
     public Text ScoreText;
-    public GameObject GameOverText;
+    public GameObject GameOverMenuPopup;
     
     private bool m_Started = false;
     private int m_Points;
@@ -71,6 +71,16 @@ public class MainManager : MonoBehaviour
     public void GameOver()
     {
         m_GameOver = true;
-        GameOverText.SetActive(true);
+        GameOverMenuPopup.SetActive(true);
+    }
+
+    public void Exit()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void ToHighScore()
+    {
+        SceneManager.LoadScene(2);
     }
 }
