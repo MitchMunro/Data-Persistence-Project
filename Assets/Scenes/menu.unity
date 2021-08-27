@@ -205,19 +205,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 312164359}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 664470073}
-        m_TargetAssemblyTypeName: MenuAndSettings, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &312164359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -737,6 +725,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputField: {fileID: 1778166475}
   savedPlayerName: 
+  playButton: {fileID: 0}
+  HSButton: {fileID: 0}
+  QuitButton: {fileID: 0}
+  workDone: 0
 --- !u!4 &664470074
 Transform:
   m_ObjectHideFlags: 0
@@ -898,7 +890,7 @@ GameObject:
   - component: {fileID: 894597992}
   - component: {fileID: 894597991}
   m_Layer: 5
-  m_Name: ExitButton
+  m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1680,7 +1672,7 @@ GameObject:
   - component: {fileID: 1778166476}
   - component: {fileID: 1778166475}
   m_Layer: 5
-  m_Name: InputField (TMP)
+  m_Name: InputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

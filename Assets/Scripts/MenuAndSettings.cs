@@ -15,7 +15,12 @@ public class MenuAndSettings : MonoBehaviour
     public TMP_InputField inputField;
     public string savedPlayerName;
 
-    private void Awake()
+    public Button playButton;
+    public Button HSButton;
+    public Button QuitButton;
+    public bool workDone = false;
+
+    private void Start()
     {
         if (Instance == null)
         {
@@ -26,11 +31,31 @@ public class MenuAndSettings : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
     }
 
-    public void ChangeName()
+    private void Update()
     {
 
+        if (!workDone && SceneManager.GetSceneByBuildIndex(0) == SceneManager.GetActiveScene())
+        {
+            SetUpButtons();
+            workDone = true;
+        }
+    }
+
+    void SetUpButtons()
+    {
+        playButton = GameObject.Find("PlayButton").GetComponent<Button>();
+        playButton.onClick.AddListener(Play);
+
+        playButton = GameObject.Find("HighScoresButton").GetComponent<Button>();
+        playButton.onClick.AddListener(HighScores);
+
+        playButton = GameObject.Find("QuitButton").GetComponent<Button>();
+        playButton.onClick.AddListener(Quit);
+
+        inputField = GameObject.Find("InputField").GetComponent<TMP_InputField>();
     }
 
     public void Play()
